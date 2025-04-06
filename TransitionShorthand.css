@@ -1,0 +1,28 @@
+.container{
+    height: 500px;
+    width: 500px;
+    background-color: green;
+    border: 3px solid red;
+    display: flex;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    border: 2px solid purple;
+    background-color: lightcoral;
+
+    transition: transform 1s ease 3s;
+
+    /* ek baar duration hatake dekhte h ain */
+    transition: transform 1s ease;
+
+    /* ab ek baar rotate aur background change ek saath karte hain */
+    transition: transform 200ms ease 1s;
+}
+
+.box:hover{
+   background-color: cornflowerblue;
+   transform: rotate(45deg);
+}
