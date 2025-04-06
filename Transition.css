@@ -1,0 +1,29 @@
+.container{
+    height: 500px;
+    width: 500px;
+    background-color: green;
+    border: 3px solid red;
+    display: flex;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    border: 2px solid purple;
+    background-color: lightcoral;
+    /* transition: 1s; */
+
+    transition-property: all;
+    /* all likhne se saari ki saari properties par transition lag jaega but it's a bad practice because iss se performance pe impact padh jaata hai, specific bata dein toh zyada accha hoga */
+    transition-property: background-color;
+    /* transition-property basically defines ki kis property ke upar aap transition property apply karna chahte hain */
+
+    transition-delay: 5s;
+    /* delay matlab kitne time baad aapka transition shuru hone waala hai */
+    /* matlab 5 sec baad hamari transition property apply hogi*/
+}
+
+.box:hover{
+    background-color: lightblue;
+}
