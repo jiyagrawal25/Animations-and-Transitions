@@ -1,0 +1,25 @@
+:root{
+    --dark--red:#981a2c;
+}
+/* to make a variable global we have to define it under the root element */
+
+.container{
+    border: 1px solid brown;
+    background-color: green;
+    height: 300px;
+    width: 300px;
+    background-color: var(--dark--red);
+}
+
+.box{
+    border: 2px solid green;
+    background-color: aqua;
+
+    --dark--red:#981a2c;
+    /* just created a variable named --dark--red */
+    /* and to create a variable you have to use two hyphens */
+    /* the scope of this variable is inside this box only, it cannot be used outside it */
+    /* now to make it global we are defining it inside the root element at the top of the stylesheet */
+    color: var(--dark--red);
+    /* here we have used the variable */
+}
