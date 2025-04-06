@@ -1,0 +1,34 @@
+.container{
+    height: 500px;
+    width: 500px;
+    background-color: green;
+    border: 3px solid red;
+    display: flex;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    border: 2px solid purple;
+    background-color: lightcoral;
+
+    transition: transform 3s ease-in;
+    /* ease-in se starting mein slowly move karega uske baad speed badh jaegi vice versa for ease-out */
+
+    /* yahaan humne ek bezier curve ka expression copy kar liya khud ka transition banane ke liye  */
+    /* ab ye copy kara kahaan se? ui par inspect karke transition property mein ease-in ke aage ke purple symbol aaya uss par click karke balls ko apne according adjust karke jo expression generate hua usey copy kar lia */
+    transition: transform 3s cubic-bezier(0.95,-0.85, 0.12, 2.04) 1s;
+
+
+    /* agar shorthand property nhi likhni toh hamey ye sab likhna pdega ye 4 chizein basically */
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function:cubic-bezier(0.95,-0.85, 0.12, 2.04) ;
+    transition-delay: 1s;
+
+}
+
+.box:hover{
+  transform: translateX(500px);
+}
